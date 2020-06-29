@@ -1,13 +1,16 @@
 .weather-search {
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
 
   &__form {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
   }
 
   &__input {

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import Header from "./Header";
+import ErrorHandler from "./ErrorHandler";
 import WeatherSearch from "./WeatherSearch";
 import DisplayData from "./DisplayData";
-import ErrorHandler from "./ErrorHandler";
+import Content from "./Container";
 
 
 const Main = () => {
@@ -34,9 +36,12 @@ const Main = () => {
   return (
 
     <div className="main">
-      <WeatherSearch api_call={api_call}/>
-      { error && <ErrorHandler/> }
-      { weather && <DisplayData weather={weather} city={city}/> }
+      <Header/>
+      <Content>
+        <WeatherSearch api_call={api_call}/>
+        { error && <ErrorHandler/> }
+        { weather && <DisplayData weather={weather} city={city}/> }
+      </Content>
     </div>
 
   )
