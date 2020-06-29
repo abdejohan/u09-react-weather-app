@@ -1,6 +1,10 @@
 .weather-search {
 
   &__form {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 5rem;
@@ -9,22 +13,38 @@
   &__input {
     background-color: lightgray;
     border: solid 2px transparent;
-    padding: 1.2rem;
-
+    padding: 1.5rem;
+    
     &:focus {
       outline: none;
       border-bottom: solid 2px;
     }
   }
-
+  
 
   &__button {
-    padding: 1.2rem;
+    padding: 1.5rem;
     border: solid 2px transparent;
-  
+    
     &:focus {
       outline: none;
     }
-  
+    
   }
+  
+  &__forecast {
+    background-color: lightgray;
+    padding: 1.5rem;
+    border: solid 1px transparent;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+
+
+
 }
