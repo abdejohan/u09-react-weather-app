@@ -11,7 +11,7 @@ import Content from "./Container";
 const Main = () => {
 
   const [error, setError] = useState(false);
-  const [weather, setWeather] = useState();
+  const [weather, setWeather] = useState({});
   const [city, setCity] = useState();
 
   const api_call = async (e: any) => {
@@ -25,13 +25,23 @@ const Main = () => {
     try {
       const request = axios.get(API_URL);
       const response = await request;
-      setWeather(response.data.main);
+      const data = response.data;
+      setWeather({temp: data.main.temp,
+        humidity: data.main.humidity,
+        wind: data.wind.speed,
+        sunrise: data.sys.sunrise,
+        sunset: data.sys.sunset,
+        icon: data.weather[0].icon,
+        description: data.weather[0].description
+      });
       setCity(response.data.name);
-      console.log("success");
     } catch(error) {
       setError(true)
     }    
+    
   }
+
+  
   
   return (
 
@@ -40,10 +50,9 @@ const Main = () => {
       <Content>
         <WeatherSearch api_call={api_call}/>
         { error && <ErrorHandler/> }
-        { weather && <DisplayData weather={weather} city={city}/> }
+        { city && <DisplayData weather={weather} city={city}/> }
       </Content>
     </div>
-
   )
 }
 

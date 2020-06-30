@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     height: auto;
-    padding: 10px;
 
   &__form {
     display: flex;
@@ -12,8 +11,9 @@
     flex-flow: row wrap;
     text-align: center;
   }
-
+  
   &__input {
+    min-width: 300px;
     background-color: lightgray;
     border: solid 2px transparent;
     padding: 1.5rem;
@@ -24,8 +24,9 @@
     }
   }
   
-
+  
   &__button {
+    min-width: 100px;
     padding: 1.5rem;
     border: solid 2px transparent;
     
@@ -36,6 +37,7 @@
   }
   
   &__forecast {
+    min-width: 200px;
     background-color: lightgray;
     padding: 1.5rem;
     border: solid 1px transparent;
@@ -45,9 +47,4 @@
       outline: none;
     }
   }
-
-
-
-
-
 }
