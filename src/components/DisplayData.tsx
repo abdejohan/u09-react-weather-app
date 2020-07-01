@@ -1,11 +1,13 @@
 import React from "react";
 
-const DisplayData = ({ weather }: any, {summary}: any) => {
+const DisplayData = ({ weather }: any) => {
 
   
-  
-  const {temp, wind, humidity, sunrise, sunset, icon, description} = weather;
+  const {temp, wind, humidity, sunrise, sunset, icon, description, city} = weather;
   console.log(weather);
+  console.log(city + "city");
+  
+  
 
   const ICON_URL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
@@ -14,7 +16,8 @@ const DisplayData = ({ weather }: any, {summary}: any) => {
     <div className="display-data">
       <p>Weather for <span>Stockholm</span></p>
       <div className="summary">
-        <h2 className="prognos-header">Prognos:</h2>
+        <h2 className="prognos-header">Prognos just nu:</h2>
+        <h3 className="city-text">{city}</h3>
         <p className="prognos-text">{description}</p>
         <img className="weather-icon" src={ICON_URL} alt="weather-icon"/>
       </div>
