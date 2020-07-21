@@ -10,18 +10,20 @@ import Display5Day from "./Display5Day";
 
 
 const Main = () => {
-
+  
+ 
+  
+  
   const [error, setError] = useState(false);
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState("");
   //const [city, setCity] = useState("");
-
+  
   const api_call = async (e: any) => {
-
+    
     e.preventDefault();
     const userInput = e.target.elements.userInput.value;
     const forecastInput = e.target.elements.forecast.value;
-    console.log(forecastInput);
     
     const API_KEY = "process.env.REACT_APP_WEATHER_API_KEY";
     const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=metric`;
@@ -54,7 +56,7 @@ const Main = () => {
         const response = await request;
         const data = response.data;
         setWeather(data.list);
-        setForecast(forecastInput);  
+        setForecast(forecastInput);
         //setCity(data.name);
       } catch(error) {
         setError(true)
@@ -62,16 +64,16 @@ const Main = () => {
     }
     
   }
-
+  
   
   return (
-
+    
     <div className="main">
       <Header/>
       <Content>
         <WeatherSearch api_call={api_call}/>
         { error && <ErrorHandler/> }
-        { forecast === "1day" && <DisplayData weather={weather}/> }
+        { forecast === "1day" && <DisplayData weather={weather}/> } 
         { forecast === "5day" && <Display5Day weatherArray={weather}/> }
       </Content>
     </div>

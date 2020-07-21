@@ -3,6 +3,42 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+
+
+  &__dayContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column wrap;
+    //background-color: darkgray;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+  &__list {
+    width: 50%;
+    justify-content: center;
+  }
+  
+  &__listItem {
+    padding: 0px 5%;
+    letter-spacing: 5px;
+    background-color: lightgray;
+  }
+
+  &__listItem_header {
+    padding: 0px 10%;
+ 
+    background-color: darkgray;
+  }
+
+  &__listItem:nth-child(2n) {
+    background-color: white;
+  }
+
+  &__listSpan {
+    float: right;
+  }
 }
 
 .weather-box {
@@ -52,6 +88,8 @@
   width: 100%;
   
 }
+
+
 
 @media screen and (min-width: 350px) {
   .data-container {

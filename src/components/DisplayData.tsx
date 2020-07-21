@@ -14,7 +14,6 @@ const DisplayData = ({ weather }: any) => {
   return (
 
     <div className="display-data">
-      <p>Weather for <span>Stockholm</span></p>
       <div className="summary">
         <h2 className="prognos-header">Prognos just nu:</h2>
         <h3 className="city-text">{city}</h3>

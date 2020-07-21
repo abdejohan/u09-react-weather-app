@@ -1,9 +1,10 @@
 .weather-search {
     width: 100%;
-    background-color: red;
+    background-color: white;
     display: flex;
     justify-content: center;
     height: auto;
+    margin-bottom: 20px;
 
   &__form {
     display: flex;
