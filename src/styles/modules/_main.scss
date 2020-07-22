@@ -4,7 +4,7 @@
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 500px) {
   .main {
     box-shadow: 10px 0px 0px 0px black;
     height: 90%;
@@ -15,7 +15,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 3px;
+    border-radius: 30px;
     overflow: hidden;
   }
 }

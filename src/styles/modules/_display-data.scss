@@ -51,7 +51,7 @@
 
 .data-container {
   font-size: 1.5rem;
-  color: darkred;  
+  color: darkgrey;  
   margin: 2px 2px;
   width: 130px;
   min-height: 150px;
@@ -79,26 +79,14 @@
 }
 
 .weather-icon {
+  margin-top: -60px;
   float: right;
 }
 
-.summary {
-  min-width: 300px;
-  max-width: 600px;
-  width: 100%;
-  
-}
 
-
-
-@media screen and (min-width: 350px) {
-  .data-container {
-    background-color: blue($color: #000000);
-  }
-
-  .summary {
-    width: 600px;
-  }
-
-
+.prognos {
+  width: 80%;
+  padding: 10px 10px;
+  height: 80px;
+  background-color: rgba($color: #e4dca9, $alpha: 0.5);
 }

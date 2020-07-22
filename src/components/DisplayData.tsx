@@ -14,10 +14,9 @@ const DisplayData = ({ weather }: any) => {
   return (
 
     <div className="display-data">
-      <div className="summary">
-        <h2 className="prognos-header">Prognos just nu:</h2>
-        <h3 className="city-text">{city}</h3>
-        <p className="prognos-text">{description}</p>
+      <div className="prognos">
+        <h2 className="p-header">{city}<span>Just nu:</span></h2>
+        <p className="p-text">{description}</p>
         <img className="weather-icon" src={ICON_URL} alt="weather-icon"/>
       </div>
       <div className="weather-box">

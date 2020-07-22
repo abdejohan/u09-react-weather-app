@@ -7,6 +7,7 @@
     margin-bottom: 20px;
 
   &__form {
+    flex-grow: 2;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
@@ -15,7 +16,7 @@
   
   &__input {
     min-width: 300px;
-    background-color: lightgray;
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     border: solid 2px transparent;
     padding: 1.5rem;
     
@@ -27,19 +28,35 @@
   
   
   &__button {
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     min-width: 100px;
     padding: 1.5rem;
     border: solid 2px transparent;
     
     &:focus {
       outline: none;
-    }
-    
+    }   
   }
+
+  &__checkboxes {
+    display: inline-block;
+    max-width: 20px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 3px;
+  }
+
+
+  &__form-gather {
+    flex-grow: 1;
+  }
+
+
   
   &__forecast {
     min-width: 200px;
-    background-color: lightgray;
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     padding: 1.5rem;
     border: solid 1px transparent;
     outline: none;
