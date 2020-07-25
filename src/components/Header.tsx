@@ -8,8 +8,6 @@ const Header = () => {
     <header className="header">
       <div className="header__background"></div>
       <p className="header__text">
-        5-Day Forecast
-        Available
       </p>
     </header>
 

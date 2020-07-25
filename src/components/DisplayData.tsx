@@ -21,23 +21,23 @@ const DisplayData = ({ weather }: any) => {
       </div>
       <div className="weather-box">
         <div className="data-container">
-          <p className="head-para">Tempeture</p>
+          <p className="head-para">Temperatur</p>
           <p className="value-para">{temp}</p>
         </div>
         <div className="data-container">
-          <p className="head-para">Wind Force</p>
+          <p className="head-para">Vind</p>
           <p className="value-para">{wind}</p>
         </div>
         <div className="data-container">
-          <p className="head-para">Humidity</p>
+          <p className="head-para">Fuktighet</p>
           <p className="value-para">{humidity}</p>
         </div>
         <div className="data-container">
-          <p className="head-para">Sunrise</p>
+          <p className="head-para">Soluppgång</p>
           <p className="value-para">{sunrise}</p>
         </div>
         <div className="data-container">
-          <p className="head-para">Sunset</p>
+          <p className="head-para">Solnedgång</p>
           <p className="value-para">{sunset}</p>
         </div>
 
