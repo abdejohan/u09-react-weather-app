@@ -1,9 +1,10 @@
 .content {
+  align-self: center;
   background-color: white;
-  padding: 20px;
   height: 100%;
-  width: 100%;
-  overflow: scroll;
+  min-height: 400px;
+  width: 70%;
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -12,4 +13,7 @@
 ul {
   list-style-type: none;
 }
+
+
+
 

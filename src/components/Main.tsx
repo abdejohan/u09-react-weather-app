@@ -11,26 +11,33 @@ import Display5Day from "./Display5Day";
 
 const Main = () => {
   
- 
-  
-  
   const [error, setError] = useState(false);
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState("");
   //const [city, setCity] = useState("");
-  
+
   const api_call = async (e: any) => {
     
     e.preventDefault();
-    const userInput = e.target.elements.userInput.value;
-    const forecastInput = e.target.elements.forecast.value;
+    const userInput = e.target.elements.userInput.value;      // CITY INPUT
+    const forecastInput = e.target.elements.forecast.value;   // 1/5 DAY FORECAST INPUT
+    let system = "metric";
+  
+
+    if (e.target.elements.celcius.checked) {
+      console.log("finns");
+    } else {
+      console.log("finns ej");
+      
+    }
+    
     
     const API_KEY = "process.env.REACT_APP_WEATHER_API_KEY";
-    const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=metric`;
-    const API_URL_5DAY = `https:api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=metric`;
+    const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=${system}`;
+    const API_URL_5DAY = `https:api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=${system}`;
     setError(false);
     
-    // TELLS IF THE USER WANTED 1 OR 5 DAY FORECAST
+    // CHECKS IF THE USER WANTS 1 OR 5 DAY FORECAST
     if (forecastInput === "1day") {
       try {
         const request = axios.get(API_URL_1DAY);     

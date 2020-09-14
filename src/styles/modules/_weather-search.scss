@@ -1,21 +1,22 @@
+
 .weather-search {
-    width: 100%;
-    max-width: 900px;
+    width: 70%;
     background-color: white;
     display: flex;
     justify-content: center;
     height: auto;
     margin-bottom: 20px;
 
-  &__form {
-    display: flex;
+    &__form {
+      width: 100%;
+      display: flex;
     justify-content: center;
     flex-flow: row wrap;
     text-align: center;
   }
   
   &__input {
-    flex-grow: 1;
+    flex-grow: 2;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     border: solid 2px transparent;
     padding: 1.5rem;
@@ -28,8 +29,9 @@
   
   
   &__button {
-    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     min-width: 100px;
+    flex-grow: 2;
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     padding: 1.5rem;
     border: solid 2px transparent;
     
@@ -48,17 +50,25 @@
     padding: 3px;
   }
 
-
+  
   
   &__forecast {
-    min-width: 200px;
+    min-width: 220px;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     padding: 1.5rem;
     border: solid 1px transparent;
     outline: none;
-
+    
     &:focus {
       outline: none;
     }
+  }
+}
+          
+
+
+@media only screen and (max-width: 600px) {
+  .weather-search {
+    width: 100%;
   }
 }
