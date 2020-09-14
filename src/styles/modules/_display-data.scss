@@ -1,8 +1,12 @@
 
 .display-data {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  background-color: white;
+  width: 100%;
+  min-height: 500px;
 
 
   &__dayContainer {
@@ -85,8 +89,9 @@
 
 
 .prognos {
-  width: 80%;
+  width: 100%;
   padding: 10px 10px;
   height: 80px;
-  background-color: rgba($color: #e4dca9, $alpha: 0.5);
+  background-color: rgba($color: #f7f4e4, $alpha: 0.5);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 }

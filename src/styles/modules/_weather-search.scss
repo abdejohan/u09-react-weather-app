@@ -1,6 +1,7 @@
 
 .weather-search {
-    width: 70%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -16,10 +17,11 @@
   }
   
   &__input {
-    flex-grow: 2;
+    flex-grow: 1;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     border: solid 2px transparent;
     padding: 1.5rem;
+    margin: 1px;
     
     &:focus {
       outline: none;
@@ -30,7 +32,6 @@
   
   &__button {
     min-width: 100px;
-    flex-grow: 2;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     padding: 1.5rem;
     border: solid 2px transparent;
@@ -40,14 +41,24 @@
     }   
   }
 
+  &__form-gather {
+    display: flex;
+  }
+
   &__checkboxes {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
-    font-size: 0.5em;
-    letter-spacing: .2em;
-    background-color: rgba($color: white, $alpha: 0.5);
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     padding: 3px;
+    padding-right: 50px;
+    margin-top: 1px;   
+  }
+
+  &__checkbox {
+    padding: 1.5rem;
   }
 
   
@@ -67,8 +78,21 @@
           
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 793px) {
   .weather-search {
     width: 100%;
+
+    &__form-gather {
+      width: 100%;
+    }
+
+    &__forecast {
+      flex-grow: 1;
+    }
+
+    &__button {
+      margin-left: 1px;
+    }
   }
 }
+

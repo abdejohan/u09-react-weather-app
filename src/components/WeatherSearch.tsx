@@ -20,8 +20,8 @@ const WeatherSearch = (props: any) => {
           <button className="weather-search__button">&rarr;</button>
         </div>
         <div className="weather-search__checkboxes">
-          <input type="radio" name="celcius" id="celcius" value="C" checked={system === "C"} onChange={() => {setSystem("C")}}/> Celsius
-          <input type="radio" id="celcius" name="farenheit" value="F" checked={system === "F"} onChange={() => {setSystem("F")}}/> Farenheit
+          <input className="weather-search__checkbox" type="radio" name="celcius" id="celcius" value="C" checked={system === "C"} onChange={() => {setSystem("C")}}/> Celsius
+          <input className="weather-search__checkbox" type="radio" id="celcius" name="farenheit" value="F" checked={system === "F"} onChange={() => {setSystem("F")}}/> Farenheit
         </div>
       </form>
     </div>
