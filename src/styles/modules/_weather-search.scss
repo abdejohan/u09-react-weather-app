@@ -50,15 +50,19 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 1.5rem;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
-    padding: 3px;
-    padding-right: 50px;
+    padding: 10px;
     margin-top: 1px;   
   }
 
   &__checkbox {
     padding: 1.5rem;
+    margin-left: 8px;
+    margin-right: 3px;
+  }
+
+  &__checkbox-text {
+    color: rgba(black, 0.34);
   }
 
   

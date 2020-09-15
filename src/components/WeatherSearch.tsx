@@ -19,6 +19,7 @@ const WeatherSearch = (props: any) => {
           <button className="weather-search__button">&rarr;</button>
         </div>
         <div className="weather-search__checkboxes">
+          <h4 className="weather-search__checkbox-text">Display weather in:</h4>
           <input className="weather-search__checkbox" type="radio" defaultChecked name="units" value="metric"/>Celsius
           <input className="weather-search__checkbox" type="radio" name="units" value="imperial"/>Farenheit
         </div>
