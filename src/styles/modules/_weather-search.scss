@@ -7,16 +7,18 @@
     justify-content: center;
     height: auto;
     margin-bottom: 20px;
-
+    
     &__form {
       width: 100%;
       display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    text-align: center;
-  }
-  
-  &__input {
+      justify-content: center;
+      flex-flow: row wrap;
+      text-align: center;
+    }
+    
+    &__input {
+    font-size: 1rem;
+    text-transform: capitalize;
     flex-grow: 1;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     border: solid 2px transparent;
@@ -34,17 +36,18 @@
     min-width: 100px;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     padding: 1.5rem;
+    font-size: 1.5rem;
     border: solid 2px transparent;
     
     &:focus {
       outline: none;
     }   
   }
-
+  
   &__form-gather {
     display: flex;
   }
-
+  
   &__checkboxes {
     width: 100%;
     display: flex;
@@ -54,21 +57,22 @@
     padding: 10px;
     margin-top: 1px;   
   }
-
+  
   &__checkbox {
     padding: 1.5rem;
     margin-left: 8px;
     margin-right: 3px;
   }
-
+  
   &__checkbox-text {
     color: rgba(black, 0.34);
   }
-
+  
   
   
   &__forecast {
     min-width: 220px;
+    font-size: 1rem;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     padding: 1.5rem;
     border: solid 1px transparent;
