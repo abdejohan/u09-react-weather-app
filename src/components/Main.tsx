@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
 
-import Header from "./Header";
-import ErrorHandler from "./ErrorHandler";
-import WeatherSearch from "./WeatherSearch";
-import DisplayData from "./DisplayData";
-import Content from "./Content";
-import Display5Day from "./Display5Day";
+import Header from './Header';
+import ErrorHandler from './ErrorHandler';
+import WeatherSearch from './WeatherSearch';
+import DisplayData from './DisplayData';
+import Content from './Content';
+import Display5Day from './Display5Day';
 
 
 const Main = (props: any) => {
