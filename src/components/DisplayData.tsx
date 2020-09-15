@@ -4,8 +4,8 @@ const DisplayData = ({ weather }: any) => {
 
   
   const {temp, wind, humidity, sunrise, sunset, icon, description, city} = weather;
-  console.log(weather);
-  console.log(city + "city");
+  //console.log(weather);
+  //console.log(city + "city");
   
   
 

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const WeatherSearch = (props: any) => {
-  const [system, setSystem] = useState("C");
 
   return (
 
@@ -20,8 +19,8 @@ const WeatherSearch = (props: any) => {
           <button className="weather-search__button">&rarr;</button>
         </div>
         <div className="weather-search__checkboxes">
-          <input className="weather-search__checkbox" type="radio" name="celcius" id="celcius" value="C" checked={system === "C"} onChange={() => {setSystem("C")}}/> Celsius
-          <input className="weather-search__checkbox" type="radio" id="celcius" name="farenheit" value="F" checked={system === "F"} onChange={() => {setSystem("F")}}/> Farenheit
+          <input className="weather-search__checkbox" type="radio" defaultChecked name="units" value="metric"/>Celsius
+          <input className="weather-search__checkbox" type="radio" name="units" value="imperial"/>Farenheit
         </div>
       </form>
     </div>
