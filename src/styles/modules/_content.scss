@@ -1,0 +1,25 @@
+.content {
+  align-self: center;
+  height: 100%;
+  min-height: 400px;
+  width: 70%;
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .content {
+    width: 100%;
+  }
+}
+
+
+

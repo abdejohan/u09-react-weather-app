@@ -1,30 +1,106 @@
+
 .weather-search {
-
-  &__form {
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
-  }
-
-  &__input {
-    background-color: lightgray;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 20px;
+    
+    &__form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      text-align: center;
+    }
+    
+    &__input {
+    font-size: 1rem;
+    text-transform: capitalize;
+    flex-grow: 1;
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     border: solid 2px transparent;
-    padding: 1.2rem;
-
+    padding: 1.5rem;
+    margin: 1px;
+    
     &:focus {
       outline: none;
       border-bottom: solid 2px;
     }
   }
-
-
-  &__button {
-    padding: 1.2rem;
-    border: solid 2px transparent;
   
+  
+  &__button {
+    min-width: 100px;
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border: solid 2px transparent;
+    
+    &:focus {
+      outline: none;
+    }   
+  }
+  
+  &__form-gather {
+    display: flex;
+  }
+  
+  &__checkboxes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
+    padding: 10px;
+    margin-top: 1px;   
+  }
+  
+  &__checkbox {
+    padding: 1.5rem;
+    margin-left: 8px;
+    margin-right: 3px;
+  }
+  
+  &__checkbox-text {
+    color: rgba(black, 0.34);
+  }
+  
+  
+  
+  &__forecast {
+    min-width: 220px;
+    font-size: 1rem;
+    background-color: rgba($color: #f7f4e4, $alpha: 0.5);
+    padding: 1.5rem;
+    border: solid 1px transparent;
+    outline: none;
+    
     &:focus {
       outline: none;
     }
-  
   }
 }
+          
+
+
+@media only screen and (max-width: 793px) {
+  .weather-search {
+    width: 100%;
+
+    &__form-gather {
+      width: 100%;
+    }
+
+    &__forecast {
+      flex-grow: 1;
+    }
+
+    &__button {
+      margin-left: 1px;
+    }
+  }
+}
+
