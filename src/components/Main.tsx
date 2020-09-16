@@ -14,6 +14,16 @@ const Main = (props: any) => {
   const [error, setError] = useState(false);
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState("");
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(getPosition);
+  }
+  function getPosition(position: { coords: { latitude: any; longitude: any; }; }) {
+    // console.log(position.coords.latitude, position.coords.longitude);
+    //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
+
+
+  }
   
   const api_call = async (e: any) => {
     
@@ -33,7 +43,7 @@ const Main = (props: any) => {
       }
     }
     
-    const API_KEY = "process.env.REACT_APP_WEATHER_API_KEY";
+    const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
     const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
     const API_URL_5DAY = `https:api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
     

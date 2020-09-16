@@ -31,7 +31,7 @@ const Display5Day = (props: any) => {
           if (day === date) {
             timeArray.push(
             <li key={main.temp_min} className="display-data__listItem">{time} 
-              <span className="display-data__listSpan">{Math.floor(tempeture)} C
+              <span className="display-data__listSpan">{Math.floor(tempeture)}
               </span>
             </li>);
           }      
