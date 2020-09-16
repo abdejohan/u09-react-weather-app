@@ -7,28 +7,29 @@ const DisplayData = ({ weather }: any) => {
   const {temp, temp_min, temp_max, feels_like} = weather;
 
   return (
-    <div className="DisplayData">
-     <p>Weather for <span>Stockholm</span></p>
-     <div className="weather-box">
-       <span>
-         <p>Tempeture</p>
-         <p> {temp} </p>
-       </span>
-       <span>
-         <p>Max Tempeture</p>
-         <p>{temp_max}</p>
-       </span>
-       <span>
-         <p>Min Tempeture</p>
-         <p>{temp_min}</p>
-       </span>
-       <span>
-         <p>Feels like</p>
-         <p> {feels_like} </p>
-       </span>
-     </div>
+
+    <div className="display-data">
+      <p>Weather for <span>Stockholm</span></p>
+      <div className="weather-box">
+        <div className="data-container">
+          <p>Tempeture</p>
+          <p>{temp}</p>
+        </div>
+        <div className="data-container">
+          <p>Max Tempeture</p>
+          <p>{temp_max}</p>
+        </div>
+        <div className="data-container">
+          <p>Min Tempeture</p>
+          <p>{temp_min}</p>
+        </div>
+        <div className="data-container">
+          <p>Feels like</p>
+          <p> {feels_like} </p>
+        </div>
+      </div>
     </div>
-  
+
   )
 }
 

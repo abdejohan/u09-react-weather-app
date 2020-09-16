@@ -1,7 +1,14 @@
 @import "./modules/_wrapper";
 @import "./modules/_main";
 @import "./modules/weather-search";
+@import "./modules/display-data";
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .App {
   text-align: center;
