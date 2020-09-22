@@ -16,15 +16,6 @@ const Main = (props: any) => {
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState("");
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(getPosition);
-  }
-  function getPosition(position: { coords: { latitude: any; longitude: any; }; }) {
-    // console.log(position.coords.latitude, position.coords.longitude);
-    //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
-
-
-  }
   
   const api_call = async (e: any) => {
     
@@ -46,7 +37,7 @@ const Main = (props: any) => {
     
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
     const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
-    const API_URL_5DAY = `https:api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
+    const API_URL_5DAY = `https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
     
     // CHECKS IF THE USER WANTS 1 OR 5 DAY FORECAST
     if (forecastInput === "1day") {
@@ -63,7 +54,7 @@ const Main = (props: any) => {
           description: data.weather[0].description,
           city: data.name
         });
-        setForecast(forecastInput);    
+        setForecast(forecastInput); 
         //setCity(data.name);
       } catch(error) {
         setError(true)
