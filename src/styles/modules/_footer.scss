@@ -1,0 +1,64 @@
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  
+  &__image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("../../media/footer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__list_title {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+
+
+  &__list {
+    color: white;
+    z-index: 4;
+    margin-left: 20%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  &__link:hover {
+    color: pink;
+  }
+
+  &__link:visited {
+    color: rgb(161, 23, 46);
+  }
+  
+}
+
+
+/* Dark effect on image */
+.darken {
+  position: relative;
+}
+
+.darken:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
