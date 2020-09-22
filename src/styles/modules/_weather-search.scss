@@ -1,13 +1,14 @@
 
 .weather-search {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    margin-bottom: 20px;
-    
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
     &__form {
       width: 100%;
       display: flex;
@@ -83,23 +84,24 @@
     }
   }
 }
-          
+
 
 
 @media only screen and (max-width: 793px) {
   .weather-search {
+    margin-top: 0px;
     width: 100%;
-
+    
     &__form-gather {
       width: 100%;
     }
-
+    
     &__forecast {
       flex-grow: 1;
     }
-
+    
     &__button {
-      margin-left: 1px;
+      border-left: 1px solid white;
     }
   }
 }

@@ -7,6 +7,7 @@ import WeatherSearch from './WeatherSearch';
 import DisplayData from './DisplayData';
 import Content from './Content';
 import Display5Day from './Display5Day';
+import Footer from './footer';
 
 
 const Main = (props: any) => {
@@ -93,6 +94,7 @@ const Main = (props: any) => {
         { forecast === "1day" && <DisplayData weather={weather}/> } 
         { forecast === "5day" && <Display5Day weatherArray={weather}/> }
       </Content>
+      <Footer/>
     </div>
   )
 }

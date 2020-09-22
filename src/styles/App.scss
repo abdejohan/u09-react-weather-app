@@ -4,6 +4,7 @@
 @import "./modules/display-data";
 @import "./modules/header";
 @import "./modules/content";
+@import "./modules/footer";
 
 
 * {
@@ -15,9 +16,10 @@
 
 .App {
   text-align: center;
+  height: 100%;
 }
 
-html {
+html, body, #root, .App{
   height: 100%;
   width: 100%;
   background-color: #FEFADC;
