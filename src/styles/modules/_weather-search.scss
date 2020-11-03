@@ -11,7 +11,8 @@
 }
 
 .weather-search {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   width: 100%;
   background-color: white;
   display: flex;
@@ -20,34 +21,33 @@
   margin-top: 20px;
   margin-bottom: 20px;
 
-    &__geo-container {
-      flex-flow: row nowrap;
-      display: flex;
-      width: 100%;
-    }
+  &__geo-container {
+    flex-flow: row nowrap;
+    display: flex;
+    width: 100%;
+  }
 
+  &__inner-geo-container {
+    font-weight: bold;
+    flex-flow: row nowrap;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+  }
 
-    &__inner-geo-container {
-      font-weight: bold;
-      flex-flow: row nowrap;
-      display: flex;
-      align-items: center;
-      min-height  : 30px;
-    }
+  &__inner-geo-container:hover {
+    cursor: pointer;
+  }
 
-    &__inner-geo-container:hover {
-      cursor: pointer;
-    }
-  
-    &__form {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      flex-flow: row wrap;
-      text-align: center;
-    }
-    
-    &__input {
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+  }
+
+  &__input {
     font-size: 1rem;
     text-transform: capitalize;
     flex-grow: 1;
@@ -55,30 +55,29 @@
     border: solid 2px transparent;
     padding: 1.5rem;
     margin: 1px;
-    
+
     &:focus {
       outline: none;
       border-bottom: solid 2px;
     }
   }
-  
-  
+
   &__button {
     min-width: 100px;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     padding: 1.5rem;
     font-size: 1.5rem;
     border: solid 2px transparent;
-    
+
     &:focus {
       outline: none;
-    }   
+    }
   }
-  
+
   &__form-gather {
     display: flex;
   }
-  
+
   &__bottom-info-bar {
     width: 100%;
     min-height: 30px;
@@ -86,9 +85,10 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
-    margin-top: 1px;   
+    margin-top: 1px;
+    padding: 0px 10px;
   }
-  
+
   &__checkbox {
     display: flex;
     min-height: 21px;
@@ -97,13 +97,12 @@
     margin-left: 8px;
     margin-right: 3px;
   }
-  
+
   &__checkbox-text {
     color: rgba(black, 0.34);
+    white-space: nowrap;
   }
-  
-  
-  
+
   &__forecast {
     min-width: 220px;
     font-size: 1rem;
@@ -111,7 +110,7 @@
     padding: 1.5rem;
     border: solid 1px transparent;
     outline: none;
-    
+
     &:focus {
       outline: none;
     }
@@ -119,27 +118,17 @@
 
   &__geo-location {
     height: 100%;
-    padding-left: 5px;
     display: flex;
     font-weight: bold;
     align-items: center;
   }
 
   &__checkbox-container {
-    padding-left: 5px;
     display: flex;
+    justify-content: flex-end;
     width: 100%;
   }
-
-
-
 }
-
-
-
-
-
-
 
 .hidden {
   visibility: hidden;
@@ -153,16 +142,18 @@
   transition: opacity 1s ease-in;
 }
 
-
-
-
-
-
-
 @media only screen and (max-width: 793px) {
   .weather-search {
     margin-top: 0px;
     width: 100%;
+
+    &__checkbox-container {
+      flex-flow: row nowrap;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+      justify-content: flex-start;
+    }
 
     &__checkboxes {
       flex-flow: column nowrap;
@@ -174,23 +165,22 @@
       justify-content: center;
       display: flex;
     }
-    
-    &__checkbox-container {
-      padding-top: 5px;
-      padding-bottom: 5px;
-    }
-    
+
     &__form-gather {
       width: 100%;
     }
-    
+
     &__forecast {
       flex-grow: 1;
     }
-    
+
     &__button {
       border-left: 1px solid white;
     }
+
+    &__bottom-info-bar {
+      display: flex;
+      flex-flow: column-reverse nowrap;
+    }
   }
 }
-
