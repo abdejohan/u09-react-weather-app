@@ -1,6 +1,9 @@
 # Weather App
 
-School project built with ReactJs using RestAPI for fetching current weather status.
+
+School project built with ReactJs using a RestAPI for fetching current weather status.
+Lets user find weather information in any given city!
+Weather available as 5 day forecast or 1 day forecast with 3h intervals.
 Check it out!
 
 
