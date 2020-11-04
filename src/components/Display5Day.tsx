@@ -35,24 +35,38 @@ const Display5Day = (props: any) => {
 
       daysArray.forEach((day) => {
         let timeArray: any[] = [];
-        weatherArray.forEach((weather: { main: any; dt_txt: any }) => {
-          const { dt_txt } = weather;
-          const { main } = weather;
-          const tempeture = main.temp;
-          const date = dt_txt.slice(5, 10);
-          const time = dt_txt.slice(10, -3);
+        weatherArray.forEach(
+          (weatherData: { main: any; dt_txt: any; weather: any }) => {
+            const { dt_txt } = weatherData;
+            const { main } = weatherData;
+            const { weather } = weatherData;
+            const tempeture = main.temp;
+            const date = dt_txt.slice(5, 10);
+            const time = dt_txt.slice(10, -3);
+            const ICON_URL = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
 
-          if (day === date) {
-            timeArray.push(
-              <li key={main.temp_min} className="display-data__listItem">
-                {time}
-                <span className="display-data__listSpan">
-                  {Math.floor(tempeture)} {unitDecider(unit)}
-                </span>
-              </li>
-            );
+            if (day === date) {
+              timeArray.push(
+                <li key={main.temp_min} className="display-data__listItem">
+                  <div className="weather-information">
+                    {time}
+                    <span className="display-data__listSpan">
+                      {Math.floor(tempeture)} {unitDecider(unit)}
+                    </span>
+                  </div>
+                  <div className="weather-information second">
+                    {weather[0].description}
+                    <img
+                      className="list-weather-icon"
+                      src={ICON_URL}
+                      alt="weather-icon"
+                    />
+                  </div>
+                </li>
+              );
+            }
           }
-        });
+        );
         testArray.push(timeArray);
       });
     } catch (error) {
@@ -68,7 +82,7 @@ const Display5Day = (props: any) => {
             {city} {convertDate(daysArray[index])}
           </h2>
           <ul className="display-data__list">
-            <li className="display-data__listItem_header">
+            <li className="display-data__listItem-header">
               Time <span className="display-data__listSpan">Temperature</span>
             </li>
             {dayData}

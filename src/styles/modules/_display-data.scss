@@ -33,21 +33,31 @@
   }
 
   &__listItem {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: 2rem;
     padding: 0px 20px;
+    padding-top: 10px;
     letter-spacing: 5px;
     background-color: white;
   }
 
-  &__listItem_header {
+  &__listItem-header {
     padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__listItem:nth-child(odd) {
-    background-color: rgba(247, 244, 228, 0.5);
+    background-color: #feffea;
   }
 
   &__listSpan {
-    float: right;
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
   }
 }
 
@@ -97,6 +107,24 @@
   padding: 10px 10px;
   background-image: linear-gradient(#f7f4e4, white);
   border-top: 2px solid gray;
+}
+
+.list-weather-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.weather-information {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.second {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1rem;
 }
 
 @media (max-width: 900px) {
