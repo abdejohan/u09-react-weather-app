@@ -4,8 +4,6 @@ const Display5Day = (props: any) => {
   const weatherArray = props.weatherArray;
   const city = props.city;
   const unit = props.unit;
-  console.log(unit);
-  console.log(city);
 
   let daysArray: any[] = [];
   const testArray: any[] = [];

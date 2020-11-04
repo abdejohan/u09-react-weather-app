@@ -15,6 +15,7 @@ const Main = (props: any) => {
   const [forecast, setForecast] = useState("");
   const [city, setCity] = useState("");
   const [unit, setUnit] = useState("");
+  let radioBtn = "";
 
   const api_call = async (e: any) => {
     e.preventDefault();
@@ -28,13 +29,14 @@ const Main = (props: any) => {
       const unitElement = unitArray[i] as HTMLInputElement;
       if (unitElement.checked) {
         setUnit(unitElement.value);
+        radioBtn = unitElement.value;
       }
     }
 
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
-    const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
-    const API_URL_5DAY = `https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
+    const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=${radioBtn}`;
+    const API_URL_5DAY = `https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=${radioBtn}`;
 
     // CHECKS IF THE USER WANTS 1 OR 5 DAY FORECAST
     if (forecastInput === "1day") {
