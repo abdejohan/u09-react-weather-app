@@ -13,6 +13,8 @@ const Main = (props: any) => {
   const [error, setError] = useState(false);
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState("");
+  const [city, setCity] = useState("");
+  const [unit, setUnit] = useState("");
 
   const api_call = async (e: any) => {
     e.preventDefault();
@@ -21,16 +23,16 @@ const Main = (props: any) => {
     const userInput = e.target.elements.userInput.value; // CITY INPUT
     const forecastInput = e.target.elements.forecast.value; // 1/5 DAY FORECAST INPUT
     const unitArray = document.getElementsByName("units");
-    let unit = "metric";
 
     for (let i = 0; i < unitArray.length; i++) {
       const unitElement = unitArray[i] as HTMLInputElement;
       if (unitElement.checked) {
-        unit = unitElement.value;
+        setUnit(unitElement.value);
       }
     }
 
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+
     const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
     const API_URL_5DAY = `https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=${unit}`;
 
@@ -62,7 +64,7 @@ const Main = (props: any) => {
         const data = response.data;
         setWeather(data.list);
         setForecast(forecastInput);
-        //setCity(data.name);
+        setCity(data.city.name);
       } catch (error) {
         setError(true);
       }
@@ -76,7 +78,9 @@ const Main = (props: any) => {
         <WeatherSearch api_call={api_call} />
         {error && <ErrorHandler />}
         {forecast === "1day" && <DisplayData weather={weather} />}
-        {forecast === "5day" && <Display5Day weatherArray={weather} />}
+        {forecast === "5day" && (
+          <Display5Day weatherArray={weather} city={city} unit={unit} />
+        )}
       </Content>
       <Footer />
     </div>

@@ -1,37 +1,38 @@
-
 .display-data {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   background-color: white;
   width: 100%;
-
+  padding: 20px;
+  font-size: 2vw;
 
   &__dayContainer {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-flow: column wrap;
     //background-color: darkgray;
     margin-bottom: 20px;
-    width: 90%;
+    width: 100%;
   }
 
   &__list {
-    width: 50%;
+    width: 100%;
     justify-content: center;
   }
-  
+
   &__listItem {
-    padding: 0px 5%;
+    padding: 0px 20px;
     letter-spacing: 5px;
     background-color: lightgray;
   }
 
   &__listItem_header {
-    padding: 0px 10%;
- 
+    padding: 0px 20px;
+
     background-color: darkgray;
   }
 
@@ -54,7 +55,7 @@
 
 .data-container {
   font-size: 1.5rem;
-  color: darkgrey;  
+  color: darkgrey;
   margin: 2px 2px;
   width: 130px;
   min-height: 150px;
@@ -66,7 +67,7 @@
 }
 
 .head-para {
-  font-weight: bold;;
+  font-weight: bold;
 }
 
 .value-para {
@@ -85,7 +86,6 @@
   margin-top: -60px;
   float: right;
 }
-
 
 .prognos {
   width: 100%;
