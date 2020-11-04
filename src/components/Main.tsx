@@ -79,7 +79,7 @@ const Main = (props: any) => {
       <Content>
         <WeatherSearch api_call={api_call} />
         {error && <ErrorHandler />}
-        {forecast === "1day" && <DisplayData weather={weather} />}
+        {forecast === "1day" && <DisplayData weather={weather} unit={unit} />}
         {forecast === "5day" && (
           <Display5Day weatherArray={weather} city={city} unit={unit} />
         )}

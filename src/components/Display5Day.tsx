@@ -69,7 +69,7 @@ const Display5Day = (props: any) => {
           </h2>
           <ul className="display-data__list">
             <li className="display-data__listItem_header">
-              Time <span className="display-data__listSpan">Tempeture</span>
+              Time <span className="display-data__listSpan">Temperature</span>
             </li>
             {dayData}
           </ul>

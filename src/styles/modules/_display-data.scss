@@ -6,15 +6,17 @@
   align-items: center;
   background-color: white;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   font-size: 2vw;
+  margin-bottom: 200px;
+  max-width: 1000px;
 
   &__dayContainer {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-flow: column wrap;
-    //background-color: darkgray;
+    background-color: darkgray;
     margin-bottom: 20px;
     width: 100%;
   }
@@ -55,15 +57,14 @@
 
 .data-container {
   font-size: 1.5rem;
+  width: 100%;
   color: darkgrey;
-  margin: 2px 2px;
-  width: 130px;
-  min-height: 150px;
+  padding: 5px 10px;
+  margin: 5px 0px;
   display: flex;
-  justify-content: space-evenly;
-  flex-flow: column nowrap;
+  justify-content: space-between;
   text-align: center;
-  background-color: white;
+  background-color: rgba(247, 244, 228, 0.5);
 }
 
 .head-para {
@@ -90,9 +91,8 @@
 .prognos {
   width: 100%;
   padding: 10px 10px;
-  height: 80px;
-  background-color: rgba($color: #f7f4e4, $alpha: 0.5);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(#f7f4e4, white);
+  border-top: 2px solid gray;
 }
 
 @media (max-width: 900px) {
