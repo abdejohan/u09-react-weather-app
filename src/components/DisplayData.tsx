@@ -61,10 +61,10 @@ const DisplayData = (props: any) => {
   return (
     <div className="display-data">
       <div className="prognos">
-        <h2 className="p-header">
+        <h3 className="p-header">
           {city}
-          <span>Just nu:</span>
-        </h2>
+          <span> right now:</span>
+        </h3>
         <p className="p-text">{description}</p>
         <img className="weather-icon" src={ICON_URL} alt="weather-icon" />
       </div>

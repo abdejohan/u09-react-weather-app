@@ -10,6 +10,7 @@
   font-size: 2vw;
   margin-bottom: 200px;
   max-width: 1000px;
+  color: #424242;
 
   &__dayContainer {
     display: flex;
@@ -19,6 +20,11 @@
     background-color: darkgray;
     margin-bottom: 20px;
     width: 100%;
+    background-color: rgba(247, 244, 228, 0.5);
+  }
+
+  h2 {
+    padding: 10px 20px;
   }
 
   &__list {
@@ -29,17 +35,15 @@
   &__listItem {
     padding: 0px 20px;
     letter-spacing: 5px;
-    background-color: lightgray;
+    background-color: white;
   }
 
   &__listItem_header {
     padding: 0px 20px;
-
-    background-color: darkgray;
   }
 
-  &__listItem:nth-child(2n) {
-    background-color: white;
+  &__listItem:nth-child(odd) {
+    background-color: rgba(247, 244, 228, 0.5);
   }
 
   &__listSpan {
@@ -58,7 +62,7 @@
 .data-container {
   font-size: 1.5rem;
   width: 100%;
-  color: darkgrey;
+  color: #424242;
   padding: 5px 10px;
   margin: 5px 0px;
   display: flex;

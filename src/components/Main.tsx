@@ -35,8 +35,8 @@ const Main = (props: any) => {
 
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
-    const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=se&units=${radioBtn}`;
-    const API_URL_5DAY = `https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=se&units=${radioBtn}`;
+    const API_URL_1DAY = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${API_KEY}&lang=en&units=${radioBtn}`;
+    const API_URL_5DAY = `https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${API_KEY}&lang=en&units=${radioBtn}`;
 
     // CHECKS IF THE USER WANTS 1 OR 5 DAY FORECAST
     if (forecastInput === "1day") {
