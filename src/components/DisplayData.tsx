@@ -28,7 +28,7 @@ const DisplayData = (props: any) => {
 
   function timeConverter(UNIX_timestamp: number) {
     var a = new Date(UNIX_timestamp * 1000);
-    var months = [
+    /** var months = [
       "Jan",
       "Feb",
       "Mar",
@@ -41,15 +41,14 @@ const DisplayData = (props: any) => {
       "Oct",
       "Nov",
       "Dec",
-    ];
-    var year = a.getFullYear();
-    var month = months[a.getMonth()];
-    var date = a.getDate();
+    ]; **/
+    // var year = a.getFullYear();
+    // var month = months[a.getMonth()];
+    // var date = a.getDate();
     var hour = a.getHours();
     var min = a.getMinutes();
     var sec = a.getSeconds();
-    var time =
-      date + " " + month + " " + year + " " + hour + ":" + min + ":" + sec;
+    var time = hour + ":" + min + ":" + sec;
     return time;
   }
 
@@ -72,7 +71,7 @@ const DisplayData = (props: any) => {
         <div className="data-container">
           <p className="head-para">Temperature</p>
           <p className="value-para">
-            {temp} {units}
+            {temp} {units.slice(0, 5)}
           </p>
         </div>
         <div className="data-container">

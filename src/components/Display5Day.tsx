@@ -78,9 +78,9 @@ const Display5Day = (props: any) => {
     <div className="display-data">
       {testArray.map((dayData, index) => (
         <div className="display-data__dayContainer" key={index}>
-          <h2>
+          <h4>
             {city} {convertDate(daysArray[index])}
-          </h2>
+          </h4>
           <ul className="display-data__list">
             <li className="display-data__listItem-header">
               Time <span className="display-data__listSpan">Temperature</span>

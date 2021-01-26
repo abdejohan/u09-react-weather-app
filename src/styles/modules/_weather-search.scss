@@ -53,8 +53,8 @@
     flex-grow: 1;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
     border: solid 2px transparent;
-    padding: 1.5rem;
     margin: 1px;
+    padding: 0.5rem;
 
     &:focus {
       outline: none;
@@ -65,7 +65,7 @@
   &__button {
     min-width: 100px;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
-    padding: 1.5rem;
+    padding: 0.5rem;
     font-size: 1.5rem;
     border: solid 2px transparent;
 
@@ -107,9 +107,9 @@
     min-width: 220px;
     font-size: 1rem;
     background-color: rgba($color: #f7f4e4, $alpha: 0.5);
-    padding: 1.5rem;
     border: solid 1px transparent;
     outline: none;
+    padding: 0.5rem;
 
     &:focus {
       outline: none;
@@ -127,6 +127,7 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    font-size: 1.1rem;
   }
 }
 

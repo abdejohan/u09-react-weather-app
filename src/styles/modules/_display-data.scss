@@ -9,10 +9,10 @@
   padding: 15px;
   font-size: 2vw;
   margin-bottom: 200px;
-  max-width: 1000px;
   color: #424242;
 
   &__dayContainer {
+    padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -48,6 +48,7 @@
     padding: 0px 20px;
     display: flex;
     justify-content: space-between;
+    font-size: 1.5rem;
   }
 
   &__listItem:nth-child(odd) {

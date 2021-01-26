@@ -72,9 +72,7 @@ const WeatherSearch = (props: any, e: any) => {
             </div>
           </div>
           <div className="weather-search__checkbox-container">
-            <h4 className="weather-search__checkbox-text">
-              Display weather in:
-            </h4>
+            <h4 className="weather-search__checkbox-text">Weather in:</h4>
             <input
               className="weather-search__checkbox"
               type="radio"

@@ -7,7 +7,6 @@ import WeatherSearch from "./WeatherSearch";
 import DisplayData from "./DisplayData";
 import Content from "./Content";
 import Display5Day from "./Display5Day";
-import Footer from "./footer";
 
 const Main = (props: any) => {
   const [error, setError] = useState(false);
@@ -84,7 +83,6 @@ const Main = (props: any) => {
           <Display5Day weatherArray={weather} city={city} unit={unit} />
         )}
       </Content>
-      <Footer />
     </div>
   );
 };
