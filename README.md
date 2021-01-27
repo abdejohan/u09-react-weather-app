@@ -1,10 +1,10 @@
 # Weather forecast application!
 School project using a RestAPI for fetching current weather status.
 Lets user find weather information in any given city!
-Forecast available in 5 day rr 1 day forecast with 3h intervals.
+Weather is diplayed as 5 or 1 day forecast with 3h intervals.
 Check it out!
 
-Hosted at Binery: [weather forecast](http://weather.johan.abde.chas.academy)
+Hosted at Binero: [weather.abde.johan.chas.academy](http://weather.johan.abde.chas.academy)
 
 ## Built With
 * ReactJS
@@ -18,7 +18,6 @@ from the project root folder, type:
 npm install
 ```
 
-
 ### Start
 Start project with:
 
@@ -28,8 +27,6 @@ npm start
 
 ## Author
 * **Johan Abdé**
-
-
 
 ## Acknowledgments
 * [OpenWeatherMap](https://openweathermap.org/) - The weather API used
