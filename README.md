@@ -11,7 +11,7 @@ Hosted at Binero: [weather.abde.johan.chas.academy](http://weather.johan.abde.ch
 
 ### Installing
 
-If you are interested in running the appliapplication locally then make sure all required dependecies are installed by,
+If you are interested in running the application locally then make sure all required dependecies are installed by,
 from the project root folder, type:
 
 ```
